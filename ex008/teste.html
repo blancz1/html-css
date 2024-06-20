@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Texto ao Passar o Mouse</title>
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+            margin: 50px;
+        }
+        .hidden-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Posiciona o texto acima do elemento */
+            left: 50%;
+            margin-left: -100px; /* Centraliza o texto */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .container:hover .hidden-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        Passe o mouse aqui
+        <div class="hidden-text">Texto escondido aparece ao passar o mouse!</div>
+    </div>
+
+</body>
+</html>
